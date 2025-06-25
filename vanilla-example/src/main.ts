@@ -39,7 +39,7 @@ function initializeForm(token: string) {
     checkoutSecureToken: token,
     formTarget: '#app',
     baseUrl: baseUrl || undefined,
-    onLoad: (totalAmountAtoms, currency) => {
+    onLoad: async (totalAmountAtoms, currency) => {
       const submitButton = document.querySelector('#submit') as HTMLButtonElement;
       if (submitButton && totalAmountAtoms && currency) {
         const amount = (totalAmountAtoms / 100).toFixed(2);
@@ -50,10 +50,10 @@ function initializeForm(token: string) {
       hideError();
       clearValidationError();
 
-      const availablePaymentMethods = formInstance.getAvailablePaymentMethods();
+      const availablePaymentMethods = await formInstance.getAvailablePaymentMethods();
       // Conditionally render paymethods based on availability
 
-      availablePaymentMethods?.forEach((method) => {
+      availablePaymentMethods?.forEach((method: any) => {
         if (method.name === SubmitMethods.airwallexApplePay && 'isAvailable' in method && method.isAvailable) {
           document.querySelector('#submit-awx-apple-pay')?.removeAttribute('disabled');
         }
