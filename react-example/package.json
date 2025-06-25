@@ -12,8 +12,7 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
-    "@getopenpay/openpay-js-react": "*",
-    "@getopenpay/utils": "*",
+    "@getopenpay/openpay-js-react": "0.3.16",
     "@stripe/stripe-js": "^4.3.0",
     "classnames": "^2.5.1",
     "fraction.js": "^4.3.7",
@@ -22,7 +21,6 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@getopenpay/config": "*",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

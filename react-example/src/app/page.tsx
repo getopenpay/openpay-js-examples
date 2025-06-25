@@ -246,7 +246,7 @@ const Form: FC<FormProps> = (props) => {
               <button
                 data-testid="submit-button"
                 disabled={!loaded || loading}
-                onClick={submit}
+                onClick={() => submit()}
                 className={`shadow-lg shadow-emerald-500/50 dark:shadow-emerald-900/50 border border-emerald-600 dark:border-emerald-500 px-4 py-2.5 mt-2 w-full font-bold rounded-lg bg-emerald-500
                        dark:bg-emerald-600 text-white hover:bg-emerald-400 dark:hover:bg-emerald-500
                        active:bg-emerald-600 dark:active:bg-emerald-700 disabled:opacity-50 disabled:pointer-events-none`}

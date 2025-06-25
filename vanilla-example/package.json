@@ -13,11 +13,10 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@getopenpay/openpay-js": "*",
+    "@getopenpay/openpay-js": "0.3.16",
     "@stripe/stripe-js": "^4.3.0"
   },
   "devDependencies": {
-    "@getopenpay/config": "*",
     "eslint": "^8.57.0",
     "typescript": "^5.5.3",
     "vite": "^5.4.1",
